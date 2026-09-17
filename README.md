@@ -285,7 +285,7 @@ phishing investigation and SOC analysis.
 - LinkedIn: ``www.linkedin.com/in/
 sourajyoti-paul-0a2aa9263``
 
-- Contact: `SOURAJYOTI.NEHU.AC@GMAIL.COM`
+- Contact: `sourajyoti.nehu.ac@gmail.com`
 - Methodology influenced by open phishing-investigation and OSINT training material
   (including FreeOSINT.org), ENISA/CERT-EU reporting practice and the ECSF profiles.
 
