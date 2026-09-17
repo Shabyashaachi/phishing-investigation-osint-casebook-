@@ -279,11 +279,13 @@ Full statement: **[DISCLAIMER.md](DISCLAIMER.md)**
 
 ## Author
 
-**[Your Name]** — junior cybersecurity professional focused on cyber threat intelligence,
+**SOURAJYOTI PAUL** — junior cybersecurity professional focused on cyber threat intelligence,
 phishing investigation and SOC analysis.
 
-- LinkedIn: `[link]`
-- Contact: `[email]`
+- LinkedIn: ``www.linkedin.com/in/
+sourajyoti-paul-0a2aa9263``
+
+- Contact: `SOURAJYOTI.NEHU.AC@GMAIL.COM`
 - Methodology influenced by open phishing-investigation and OSINT training material
   (including FreeOSINT.org), ENISA/CERT-EU reporting practice and the ECSF profiles.
 
