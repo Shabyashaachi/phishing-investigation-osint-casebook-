@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Phishing Investigation & OSINT Casebook
 
 **OSINT-Driven Phishing Investigation, Infrastructure Analysis & Threat Intelligence Reporting**
@@ -289,3 +290,7 @@ phishing investigation and SOC analysis.
 Feedback from practising CTI and SOC analysts is welcome — open an issue, particularly if
 you disagree with a confidence judgement. Disagreement about confidence is the most useful
 review this repository can receive.
+=======
+# phishing-investigation-osint-casebook-
+Practical casebook for phishing investigations using OSINT. Includes workflows, tools, and playbooks to analyze phishing campaigns, trace infrastructure, and uncover threat actor patterns. Built for SOC analysts, security researchers, and OSINT practitioners.
+>>>>>>> f790d7cee3f6e7a012d7f99ad56434bd17ae5dea
