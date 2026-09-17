@@ -1,0 +1,45 @@
+=== SYNTHETIC ARTEFACT — fabricated for portfolio purposes ===
+=== Reserved domains (RFC 2606/6761) and IPs (RFC 5737) only ===
+=== Recipient pseudonymised; URL token redacted ===
+
+Received: from mbx-07.meridian-fin.example (unknown [10.20.4.19])
+        by mbx-07.meridian-fin.example with LMTP id a71c09fe
+        for <user-1182@meridian-fin.example>; Wed, 11 Feb 2026 08:31:11 +0000 (UTC)
+Received: from mx3.mail-relay-eu.invalid ([203.0.113.140])
+        by mx.meridian-fin.example (Postfix) with ESMTPS id 7B31C0D442
+        for <user-1182@meridian-fin.example>; Wed, 11 Feb 2026 08:31:09 +0000 (UTC)
+Received: from smtp-out-02.mail-relay-eu.invalid (smtp-out-02.mail-relay-eu.invalid [203.0.113.141])
+        by mx3.mail-relay-eu.invalid (Postfix) with ESMTPS id 0E4A9117B2;
+        Wed, 11 Feb 2026 08:31:04 +0000 (UTC)
+Received: from [10.0.0.14] (unknown [10.0.0.14])
+        by smtp-out-02.mail-relay-eu.invalid (Postfix) with ESMTPSA id C1198442A;
+        Wed, 11 Feb 2026 08:31:02 +0000 (UTC)
+Authentication-Results: mx.meridian-fin.example;
+        spf=pass (sender IP is 203.0.113.140) smtp.mailfrom=mail-relay-eu.invalid;
+        dkim=pass header.d=mail-relay-eu.invalid header.s=s1 header.b=Qk92xL1r;
+        dmarc=fail (p=quarantine sp=quarantine dis=none) header.from=meridian-fin.example
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail-relay-eu.invalid;
+        s=s1; t=1770798662; bh=SYNTHETIC; h=From:To:Subject:Date;
+        b=SYNTHETIC-SIGNATURE-VALUE
+Return-Path: <bounce@mx3.mail-relay-eu.invalid>
+From: "Meridian IT Security" <no-reply@meridian-fin.example>
+To: <user-1182@meridian-fin.example>
+Subject: [Action] Re-authenticate your Meridian SSO session
+Date: Wed, 11 Feb 2026 08:31:04 +0000
+Message-ID: <20260211.083104.8812@mx3.mail-relay-eu.invalid>
+MIME-Version: 1.0
+Content-Type: text/html; charset="UTF-8"
+
+<p>Hello [FIRSTNAME],</p>
+<p>A new device was registered to your Meridian SSO account at 07:58 CET
+from an unrecognised location. If this was not you, re-authenticate now to
+revoke the session.</p>
+<p><a href="https://sso-meridian-fin.example/auth/realms/meridian/login?state=[TOKEN-REDACTED]">
+Review sign-in activity</a></p>
+<p>Meridian IT Security<br>This is an automated message.</p>
+
+=== ANALYST NOTES ===
+- No Reply-To and no X-Mailer header (both present in Wave 1) - reduced signature surface.
+- Hop 1 asserts RFC1918 source: submission behind the sender's own NAT.
+- spf=pass / dkim=pass are for the ATTACKER's domain. Only dmarc alignment is decisive.
+- dis=none: the receiving gateway did NOT apply the published quarantine policy.

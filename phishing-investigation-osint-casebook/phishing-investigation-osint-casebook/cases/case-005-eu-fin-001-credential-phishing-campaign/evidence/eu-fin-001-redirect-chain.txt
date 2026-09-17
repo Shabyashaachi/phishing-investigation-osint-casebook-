@@ -1,0 +1,34 @@
+=== SYNTHETIC ARTEFACT — reconstructed sandbox record, not a live retrieval ===
+Retrieval 2026-02-11T09:41Z | residential egress | token substituted with CONTROL
+NO CREDENTIALS WERE SUBMITTED AT ANY POINT.
+
+--- 1. REQUEST CHAIN ---
+GET https://sso-meridian-fin.example/auth/realms/meridian/login?state=CONTROL
+  -> 200 OK   198.51.100.44   server: nginx
+  (no redirects - single hop, unlike Wave 1's 3-hop chain)
+
+--- 2. PAGE STRUCTURE ---
+form#kc-form-login  action="/auth/realms/meridian/login-actions/authenticate"  method=POST
+  input[name=username]  (pre-populated from state parameter)
+  input[name=password]
+Branding assets referenced: /resources/logo.svg, /resources/theme.css  (served by 198.51.100.44)
+
+--- 3. SERVER-SIDE BEHAVIOUR (the decisive observation) ---
+On submission of CONTROL values, the sandbox recorded OUTBOUND requests
+originating from 198.51.100.44 (server-side), not from the client:
+
+  198.51.100.44 -> sso.meridian-fin.example:443   POST /auth/.../authenticate
+  198.51.100.44 -> sso.meridian-fin.example:443   GET  /auth/.../mfa-challenge
+  sso.meridian-fin.example -> 198.51.100.44       200 (MFA push challenge issued)
+  [MFA challenge rendered back to client through 198.51.100.44]
+  sso.meridian-fin.example -> 198.51.100.44       Set-Cookie: KEYCLOAK_SESSION=<token>
+
+INTERPRETATION: bidirectional relay = adversary-in-the-middle reverse proxy.
+EXCLUDED ALTERNATIVE: a static clone embedding the real site's images would produce
+CLIENT-side asset requests and could not complete an MFA challenge.
+CONSEQUENCE: session token capture. Password reset alone is insufficient.
+
+--- 4. CLOAKING CHECK ---
+residential egress + mobile UA .............. 200, full page
+datacentre egress + known-scanner UA ........ 404
+=> automated reputation verdicts on this URL are unreliable.

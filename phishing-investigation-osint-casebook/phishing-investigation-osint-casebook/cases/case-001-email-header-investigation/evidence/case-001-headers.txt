@@ -1,0 +1,44 @@
+=== SYNTHETIC ARTEFACT — fabricated for portfolio purposes ===
+=== Reserved domains (RFC 2606/6761) and IPs (RFC 5737) only ===
+=== Recipient identity pseudonymised as user-0417 ===
+
+Received: from mbx-03.meridian-fin.example (unknown [10.20.4.13])
+        by mbx-03.meridian-fin.example with LMTP id 8ff21a0c
+        for <user-0417@meridian-fin.example>; Wed, 14 Jan 2026 08:40:21 +0000 (UTC)
+Received: from mx1.relay-ns2.invalid ([203.0.113.77])
+        by mx.meridian-fin.example (Postfix) with ESMTPS id 4C7D9A118F
+        for <user-0417@meridian-fin.example>; Wed, 14 Jan 2026 08:40:19 +0000 (UTC)
+Received: from webmail-04.relay-ns2.invalid (webmail-04.relay-ns2.invalid [198.51.100.203])
+        by mx1.relay-ns2.invalid (Postfix) with ESMTP id 9A21B4410C;
+        Wed, 14 Jan 2026 08:40:12 +0000 (UTC)
+Received: from localhost (localhost [127.0.0.1])
+        by webmail-04.relay-ns2.invalid (Postfix) with ESMTP id 33F0712A7;
+        Wed, 14 Jan 2026 08:40:10 +0000 (UTC)
+Authentication-Results: mx.meridian-fin.example;
+        spf=fail (sender IP is 203.0.113.77) smtp.mailfrom=relay-ns2.invalid;
+        dkim=none;
+        dmarc=fail action=quarantine header.from=meridian-fin.example
+Received-SPF: Fail (mx.meridian-fin.example: domain of relay-ns2.invalid
+        does not designate 203.0.113.77 as permitted sender)
+Return-Path: <bounce-4417@mx1.relay-ns2.invalid>
+From: "IT Support" <it-support@meridian-fin.example>
+Reply-To: "Mailbox Admin" <mailbox-admin@meridian-support.invalid>
+To: <user-0417@meridian-fin.example>
+Subject: Action required: mailbox storage exceeded
+Date: Wed, 14 Jan 2026 08:40:12 +0000
+Message-ID: <20260114.084012.4417@mx1.relay-ns2.invalid>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b1_4417"
+X-Mailer: PHPMailer 6.8.0 (https://github.com/PHPMailer/PHPMailer)
+
+--b1_4417
+Content-Type: text/html; charset="UTF-8"
+
+<p>Dear User,</p>
+<p>Your mailbox has exceeded its storage quota. You must verify your account
+within 24 hours or your mailbox will be deactivated.</p>
+<p><a href="https://mailbox-verify.relay-ns2.invalid/auth/login?u=[TOKEN-REDACTED]">
+Verify mailbox</a></p>
+<p>IT Support<br>Meridian Financial Group</p>
+
+--b1_4417--

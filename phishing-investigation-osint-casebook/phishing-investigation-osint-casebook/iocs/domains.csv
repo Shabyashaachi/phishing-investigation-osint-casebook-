@@ -1,0 +1,12 @@
+ioc_id,type,indicator,indicator_defanged,first_observed,last_observed,source,description,confidence,status,related_case,recommended_action,tlp
+IOC-001-01,domain,relay-ns2.invalid,relay-ns2[.]invalid,2026-01-14T08:31Z,2026-01-20T00:00Z,email artefact (A),Wave 1 sending domain,high,aged,CASE-001,block,CLEAR
+IOC-001-02,domain,meridian-support.invalid,meridian-support[.]invalid,2026-01-14T08:31Z,2026-01-14T08:31Z,email artefact (A),Wave 1 Reply-To lookalike domain,high,aged,CASE-001,block,CLEAR
+IOC-002-01,domain,mailbox-verify.relay-ns2.invalid,mailbox-verify.relay-ns2[.]invalid,2026-01-14T08:31Z,2026-01-16T00:00Z,email artefact (A),Wave 1 initial link host,high,retired,CASE-002,block,CLEAR
+IOC-002-02,domain,trk-shorten.test,trk-shorten[.]test,2026-01-14T10:12Z,2026-01-14T10:12Z,sandbox (A),Abused third-party link shortener in redirect chain,medium-high,active,CASE-002,enrich_only,CLEAR
+IOC-003-01,domain,meridian-verify.example,meridian-verify[.]example,2026-01-12T00:00Z,2026-01-18T00:00Z,pDNS (B),Wave 1 landing domain,high,retired,CASE-003,block,CLEAR
+IOC-003-02,domain,mail.meridian-verify.example,mail.meridian-verify[.]example,2026-01-14T11:31Z,2026-01-18T00:00Z,DNS (A),Wave 1 MX target; suspected exfiltration path,medium,retired,CASE-003,block,CLEAR
+IOC-003-03,domain,meridian-secure-verify.example,meridian-secure-verify[.]example,2026-01-11T14:05Z,2026-01-11T14:05Z,crt.sh (A),Wave 1 staged domain; never observed in delivery,medium-high,active,CASE-003,block,CLEAR
+IOC-005-01,domain,sso-meridian-fin.example,sso-meridian-fin[.]example,2026-02-10T00:00Z,2026-02-13T14:00Z,pDNS (B),Wave 2 AiTM landing domain,high,retired,CASE-005,block,CLEAR
+IOC-005-02,domain,mail-relay-eu.invalid,mail-relay-eu[.]invalid,2026-02-11T08:31Z,2026-02-18T00:00Z,email artefact (A),Wave 2 sending domain; aged 5 months with valid SPF/DKIM,high,active,CASE-005,block,CLEAR
+IOC-005-03,domain,sso-meridian-group.example,sso-meridian-group[.]example,2026-02-09T06:44Z,2026-02-09T06:44Z,crt.sh (A),Wave 2 staged domain; never observed in delivery,medium,active,CASE-005,block,CLEAR
+IOC-005-04,domain,login-meridian-fin.example,login-meridian-fin[.]example,2026-02-09T06:44Z,2026-02-09T06:44Z,crt.sh (A),Wave 2 staged domain; never observed in delivery,medium,active,CASE-005,block,CLEAR

@@ -1,0 +1,26 @@
+# Never commit real samples or live artefacts
+*.eml
+*.msg
+!cases/**/evidence/*-headers.txt
+samples/
+live-evidence/
+*.pcap
+*.zip
+
+# Credentials and keys
+.env
+*.key
+*_api_key*
+config.local.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

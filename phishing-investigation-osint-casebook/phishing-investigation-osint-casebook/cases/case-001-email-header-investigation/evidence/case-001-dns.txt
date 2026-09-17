@@ -1,0 +1,17 @@
+=== SYNTHETIC ARTEFACT — reconstructed tool output, not a live query ===
+Queries issued (would be) 2026-01-14T09:02Z
+
+$ dig +short TXT meridian-fin.example
+"v=spf1 include:_spf.corp-mail.example -all"
+
+$ dig +short TXT _dmarc.meridian-fin.example
+"v=DMARC1; p=quarantine; rua=mailto:dmarc@meridian-fin.example; adkim=s; aspf=s"
+
+$ dig +short TXT relay-ns2.invalid
+"v=spf1 ip4:203.0.113.77 ~all"
+# Note: the sending domain publishes its own valid SPF record.
+# A pass on this record would say nothing about legitimacy — it authorises
+# the attacker's own infrastructure to send for the attacker's own domain.
+
+$ dig +short MX meridian-fin.example
+10 mx.meridian-fin.example.

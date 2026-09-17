@@ -1,0 +1,11 @@
+# Optional. The casebook is fully usable without any of this.
+# Helper scripts only - see tools/README.md
+#
+# Install:  pip install -r requirements.txt
+
+requests>=2.31.0        # RDAP / CT HTTP queries
+dnspython>=2.6.0        # DNS record retrieval
+python-whois>=0.9.0     # WHOIS fallback where RDAP is thin
+tldextract>=5.1.0       # Registrable-domain extraction via the public suffix list
+pandas>=2.2.0           # IOC CSV handling
+rich>=13.7.0            # Readable terminal output

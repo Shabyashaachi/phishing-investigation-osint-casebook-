@@ -1,0 +1,6 @@
+ioc_id,type,indicator,indicator_defanged,first_observed,last_observed,source,description,confidence,status,related_case,recommended_action,tlp
+IOC-001-04,email,it-support@meridian-fin.example,it-support[@]meridian-fin[.]example,2026-01-14T08:31Z,2026-01-14T08:31Z,email artefact (A),SPOOFED - victim organisation's own address. DO NOT BLOCK,high,active,CASE-001,enrich_only,CLEAR
+IOC-001-05,email,mailbox-admin@meridian-support.invalid,mailbox-admin[@]meridian-support[.]invalid,2026-01-14T08:31Z,2026-01-14T08:31Z,email artefact (A),Wave 1 Reply-To; attacker-controlled,high,aged,CASE-001,block,CLEAR
+IOC-001-06,email,bounce-4417@mx1.relay-ns2.invalid,bounce-4417[@]mx1.relay-ns2[.]invalid,2026-01-14T08:31Z,2026-01-14T08:31Z,email artefact (A),Wave 1 envelope sender,high,aged,CASE-001,block,CLEAR
+IOC-005-08,email,no-reply@meridian-fin.example,no-reply[@]meridian-fin[.]example,2026-02-11T08:31Z,2026-02-11T08:34Z,email artefact (A),SPOOFED - victim organisation's own address. DO NOT BLOCK,high,active,CASE-005,enrich_only,CLEAR
+IOC-005-09,email,bounce@mx3.mail-relay-eu.invalid,bounce[@]mx3.mail-relay-eu[.]invalid,2026-02-11T08:31Z,2026-02-11T08:34Z,email artefact (A),Wave 2 envelope sender,high,active,CASE-005,block,CLEAR

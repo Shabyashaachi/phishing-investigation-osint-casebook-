@@ -1,0 +1,3 @@
+ioc_id,type,indicator,indicator_defanged,first_observed,last_observed,source,description,confidence,status,related_case,recommended_action,tlp
+IOC-002-06,sha256,SYNTHETIC-KIT-PAGE-W1,SYNTHETIC-KIT-PAGE-W1,2026-01-14T10:12Z,2026-01-14T10:12Z,sandbox (A),Placeholder - landing page DOM hash Wave 1. SYNTHETIC VALUE,low,active,CASE-002,enrich_only,CLEAR
+IOC-005-13,sha256,SYNTHETIC-KIT-PAGE-W2,SYNTHETIC-KIT-PAGE-W2,2026-02-11T09:41Z,2026-02-11T09:41Z,sandbox (A),Placeholder - landing page DOM hash Wave 2. SYNTHETIC VALUE,low,active,CASE-005,enrich_only,CLEAR

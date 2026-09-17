@@ -1,0 +1,2 @@
+ioc_id,type,indicator,indicator_defanged,first_observed,last_observed,source,description,confidence,status,related_case,recommended_action,tlp
+IOC-XXX-01,domain,,,,,,,,,,,CLEAR

@@ -1,0 +1,34 @@
+=== SYNTHETIC ARTEFACT — reconstructed tool output, not a live query ===
+Queries issued (would be) 2026-02-11T09:14Z, authoritative servers
+
+$ dig +short A sso-meridian-fin.example
+198.51.100.44
+$ dig +short MX sso-meridian-fin.example
+(no answer)
+$ dig +short TXT sso-meridian-fin.example
+(no answer)
+$ dig +short NS sso-meridian-fin.example
+ns1.dnspark-lite.test.
+ns2.dnspark-lite.test.
+$ dig sso-meridian-fin.example A | grep -E '^sso'
+sso-meridian-fin.example.  120  IN  A  198.51.100.44      # TTL 120 - built to move
+
+$ dig +short A mail-relay-eu.invalid
+203.0.113.140
+$ dig +short MX mail-relay-eu.invalid
+10 mx3.mail-relay-eu.invalid.
+$ dig +short TXT mail-relay-eu.invalid
+"v=spf1 ip4:203.0.113.140 -all"
+$ dig +short TXT s1._domainkey.mail-relay-eu.invalid
+"v=DKIM1; k=rsa; p=SYNTHETIC-PUBLIC-KEY"
+$ dig +short TXT _dmarc.mail-relay-eu.invalid
+(NXDOMAIN)
+$ dig mail-relay-eu.invalid A | grep -E '^mail-relay'
+mail-relay-eu.invalid.  3600  IN  A  203.0.113.140        # TTL 3600 - built to persist
+
+# Victim domain, for comparison:
+$ dig +short TXT meridian-fin.example
+"v=spf1 include:_spf.corp-mail.example -all"
+$ dig +short TXT _dmarc.meridian-fin.example
+"v=DMARC1; p=quarantine; rua=mailto:dmarc@meridian-fin.example; adkim=s; aspf=s"
+# mail-relay-eu.invalid is NOT in the victim's SPF include chain.

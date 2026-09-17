@@ -1,0 +1,6 @@
+ioc_id,type,indicator,indicator_defanged,first_observed,last_observed,source,description,confidence,status,related_case,recommended_action,tlp
+IOC-001-03,ipv4,203.0.113.77,203.0.113[.]77,2026-01-14T08:31Z,2026-01-20T00:00Z,Received header (A),Wave 1 sending host; 2 co-tenants,high,aged,CASE-001,block,CLEAR
+IOC-002-03,ipv4,198.51.100.12,198.51.100[.]12,2026-01-14T10:12Z,2026-01-14T10:12Z,sandbox (A),Redirect hop; abused third-party service,medium,active,CASE-002,enrich_only,CLEAR
+IOC-003-04,ipv4,198.51.100.44,198.51.100[.]44,2026-01-12T00:00Z,2026-02-13T14:00Z,DNS (A),Landing host both waves; MASS SHARED HOSTING 900+ tenants,high,shared_infrastructure,CASE-003;CASE-005,monitor,CLEAR
+IOC-003-05,ipv4,198.51.100.91,198.51.100[.]91,2026-01-14T11:31Z,2026-01-18T00:00Z,DNS (A),Wave 1 mail host; 14 co-tenants,medium-high,retired,CASE-003,alert,CLEAR
+IOC-005-05,ipv4,203.0.113.140,203.0.113[.]140,2026-02-11T08:31Z,2026-02-18T00:00Z,Received header (A),Wave 2 sending host; 3 co-tenants; dedicated mail stack,high,active,CASE-005,block,CLEAR

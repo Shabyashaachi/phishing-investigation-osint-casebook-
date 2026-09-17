@@ -1,0 +1,4 @@
+ioc_id,type,indicator,indicator_defanged,first_observed,last_observed,source,description,confidence,status,related_case,recommended_action,tlp
+IOC-002-04,url,https://mailbox-verify.relay-ns2.invalid/auth/login,hxxps://mailbox-verify.relay-ns2[.]invalid/auth/login,2026-01-14T08:31Z,2026-01-16T00:00Z,email artefact (A),Wave 1 initial link; victim token stripped,high,retired,CASE-002,block,CLEAR
+IOC-002-05,url,https://secure-login.meridian-verify.example/session/auth,hxxps://secure-login.meridian-verify[.]example/session/auth,2026-01-14T10:12Z,2026-01-18T00:00Z,sandbox (A),Wave 1 credential-collection page,high,retired,CASE-002,block,CLEAR
+IOC-005-07,url,https://sso-meridian-fin.example/auth/realms/meridian/login,hxxps://sso-meridian-fin[.]example/auth/realms/meridian/login,2026-02-11T08:31Z,2026-02-13T14:00Z,email artefact (A),Wave 2 AiTM proxy entry point; state token stripped,high,retired,CASE-005,block,CLEAR
